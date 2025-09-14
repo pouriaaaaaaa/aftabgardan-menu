@@ -3,30 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>منوی رستوران آفتاب‌گردان</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Vazir', sans-serif;
       direction: rtl;
-      background-color: #fff8dc;
+      background: radial-gradient(circle at top left, #fff8dc, #fef3d3);
       background-image: url('https://i.imgur.com/3Yz0ZyT.png');
       background-repeat: no-repeat;
       background-position: top right;
       background-size: 150px;
       padding: 20px;
+      margin: 0;
     }
+
     h1 {
       color: #d4af37;
       text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 15px;
+      background-color: #fffdf0;
     }
+
+    h2 {
+      color: #a0522d;
+      margin-top: 40px;
+      font-size: 26px;
+      border-bottom: 2px dashed #e6b800;
+      padding-bottom: 5px;
+    }
+
     .section {
-      margin-top: 30px;
+      margin-top: 20px;
     }
+
     .item {
-      background: #ffffffcc;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #ccc;
+      background: #fffdf7;
+      padding: 14px 18px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(160, 82, 45, 0.1);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .item:hover {
+      background-color: #fffbe6;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .item { font-size: 17px; padding: 12px; }
     }
   </style>
 </head>
@@ -80,6 +114,10 @@
     <div class="item">دوغ لیوانی</div>
     <div class="item">دوغ خانواده</div>
     <div class="item">آب معدنی</div>
+  </div>
+</body>
+</html>
+
   </div>
 </body>
 </html>
