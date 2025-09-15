@@ -7,46 +7,109 @@
   <style>
     body {
       font-family: 'Vazir', sans-serif;
-      background-color: #fffdf0;
-      padding: 20px;
       direction: rtl;
+      background: radial-gradient(circle at top left, #fff8dc, #fef3d3);
+      background-image: url('https://i.imgur.com/3Yz0ZyT.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 150px;
+      padding: 20px;
+      margin: 0;
     }
+
     h1 {
-      text-align: center;
       color: #d4af37;
-      font-size: 32px;
+      text-align: center;
+      font-size: 36px;
       margin-bottom: 20px;
-    }
-    .item {
-      background: #fff;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
       padding: 15px;
+      background-color: #fffdf0;
+    }
+
+    h2 {
+      color: #a0522d;
+      margin-top: 40px;
+      font-size: 26px;
+      border-bottom: 2px dashed #e6b800;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .item {
+      background: #fffdf7;
+      padding: 14px 18px;
       margin: 10px 0;
-      border: 1px dashed #d4af37;
-      border-radius: 10px;
-      font-size: 18px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(160, 82, 45, 0.1);
+      transition: all 0.3s ease;
+      font-size: 20px;
       font-weight: bold;
     }
+
+    .item:hover {
+      background-color: #fffbe6;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      transform: scale(1.02);
+    }
+
     .desc {
       font-size: 14px;
       color: #555;
       margin-top: 5px;
+      font-weight: normal;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .item { font-size: 17px; padding: 12px; }
     }
   </style>
 </head>
 <body>
+  <div style="text-align:center; margin-bottom:20px;">
+    <a href="index.html" style="margin:0 10px; text-decoration:none; color:#a0522d;">فارسی 🇮🇷</a>
+    <a href="index-ar.html" style="margin:0 10px; text-decoration:none; color:#a0522d;">العربية 🇸🇦</a>
+    <a href="index-en.html" style="margin:0 10px; text-decoration:none; color:#a0522d;">English 🇬🇧</a>
+  </div>
+
   <h1>🌻 قائمة مطعم عباد الشمس</h1>
 
-  <div class="item">چلو كباب كوبيده
-    <div class="desc">سيخين من الكباب، أرز إيراني، طماطم مشوية</div>
-  </div>
-
-  <div class="item">جوجه كباب ممتاز
-    <div class="desc">فيليه دجاج بالزعفران، زبدة، أرز إيراني</div>
-  </div>
-
-  <div class="item">ته چين دجاج
-    <div class="desc">أرز بالزعفران، دجاج مفتت، زبيب، زبادي، بيض</div>
-  </div>
-
-</body>
-</html>
+  <div class="section">
+    <h2>🥘 الأطباق الرئيسية</h2>
+    <div class="item">چلو جوجه كباب<div class="desc">٢٥٠ غرام من فيليه الدجاج بالزعفران، أرز إيراني، زبدة محلية</div></div>
+    <div class="item">چلو كباب كوبيده<div class="desc">سيخين من الكباب المفروم، أرز إيراني، طماطم مشوية</div></div>
+    <div class="item">جوجه ممتاز<div class="desc">فيليه دجاج بدون عظم، متبل بالزعفران والزبدة</div></div>
+    <div class="item">ته چين دجاج<div class="desc">أرز بالزعفران، دجاج مفتت، زبادي، بيض، زبيب</div></div>
+    <div class="item">چلو أرز إيراني<div class="desc">أرز إيراني عطري، زبدة محلية</div></div>
+    <div class="item">كباب برگ<div class="desc">لحم غنم مشوي على الفحم، مع أرز وطماطم</div></div>
+    <div class="item">عدس پلو باللحم<div class="desc">عدس، لحم مفروم، زبيب، أرز إيراني</div></div>
+    <div class="item">عدس پلو ساده<div class="desc">عدس، زبيب، أرز إيراني</div></div>
+    <div class="item">عدس پلو مع فخذ الدجاج<div class="desc">عدس پلو مع فخذ دجاج كاملة مقلية</div></div>
+    <div class="item">دجاج مقلي<div class="desc">فخذ دجاج كاملة، مقلية بتوابل خاصة</div></div>
+    <div class="item">چلو وزيري<div class="desc">سيخ جوجه + سيخ كوبيده، أرز إيراني</div></div>
+    <div class="item">طبق وزيري<div class="desc">بدون أرز، يحتوي على جوجه وكوبيده</div></div>
+    <div class="item">چلو سلطاني<div class="desc">سيخ برگ + سيخ كوبيده، أرز إيراني</div></div>
+    <div class="item">طبق سلطاني<div class="desc">بدون أرز، يحتوي على برگ وكوبيده</div></div>
+    <div class="item">چلو ميكس<div class="desc">مزيج من جوجه، كوبيده، برگ مع أرز إيراني</div></div>
+    <div class="item">طبق ميكس<div class="desc">مزيج من ثلاثة أنواع كباب بدون أرز</div></div>
+    <div class="item">چلو كباب بناب<div class="desc">٢٥٠ غرام لحم غنم نقي مشوي، أرز إيراني، طماطم</div></div>
+    <div class="item">طبق بناب<div class="desc">كباب بناب بدون أرز، مع طماطم وفلفل</div></div>
+    <div class="item">چلو كباب خاص عباد الشمس<div class="desc">سيخ برگ + سيخ كوبيده + سيخ جوجه، أرز إيراني، طماطم، فلفل، زبدة، نارنج</div></div>
+    <div class="item">مكرونة<div class="desc">مكرونة مع صلصة الطماطم، لحم مفروم، فلفل، توابل، يقدم مع مخلل منزلي</div></div>
+    <div class="item">چلو كباب نگين دار<div class="desc">كوبيده مع صفار البيض، أرز إيراني، طماطم، زبدة</div></div>
+    <div class="item">طبق نگين دار<div class="desc">كباب نگين دار بدون أرز، مع طماطم وفلفل</div></div>
+    <div class="item">چلو كباب تابه‌ای<div class="desc">كباب منزلي في المقلاة، أرز إيراني، طماطم، زبدة</div></div>
+    <div class="item">طبق كباب تابه‌ای<div class="desc">كباب المقلاة بدون أرز، مع طماطم وفلفل</div></div>
+    <div class="item">استامبولي<div class="desc">أرز، بطاطا، صلصة طماطم، لحم مفروم، توابل</div></div>
+    <div class="item">جوجه كباب ممتاز<div class="desc">فيليه دجاج بالزعفران، متبل بالزبدة والتوابل، مع أرز إيراني</div></div>
+    <div class="item">چلو أرز طويل الحبة<div class="desc">أرز إيراني طويل الحبة، زبدة محلية، مناسب مع الأطباق</div></div>
+    <div class="item">لوبيا پلو باللحم<div class="desc">أرز، فاصوليا خضراء، لحم، صلصة طماطم، توابل</div></div>
+    <div class="item">لوبيا پلو بالدجاج<div class="desc">أرز، فاصوليا خضراء، دجاج، صلصة طماطم، توابل</div></div>
+    <div class="item">طبق كوبيده مع دجاج<div class="desc">سيخ كوبيده + فخذ دجاج مقلية، بدون أرز</div></div
