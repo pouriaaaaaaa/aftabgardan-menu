@@ -152,5 +152,44 @@
     <div class="item">آب معدنی</div>
 
   </div>
+  <button onclick="toggleDark()" style="position:fixed; top:20px; left:20px; padding:8px 12px; background:#333; color:#fff; border:none; border-radius:6px; cursor:pointer;">🌓 حالت شب</button>
+
+  <script>
+  function toggleDark() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+  
+<style>
+  .dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  .dark-mode .item {
+    background-color: #2c2c2c;
+    box-shadow: none;
+  }
+
+  .dark-mode h1, .dark-mode h2 {
+    color: #ffd700;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const headers = document.querySelectorAll("h2");
+    headers.forEach(header => {
+      header.style.cursor = "pointer";
+      const section = header.nextElementSibling;
+      section.style.display = "none";
+
+      header.addEventListener("click", () => {
+        section.style.display = section.style.display === "none" ? "block" : "none";
+      });
+    });
+  });
+</script>
+
+  
 </body>
 </html>
