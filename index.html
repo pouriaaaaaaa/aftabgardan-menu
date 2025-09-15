@@ -153,15 +153,25 @@
     <div class="item">آب معدنی</div>
 
   </div>
+  
+<div style="margin-top:50px; padding:20px; border:2px dashed #d4af37; border-radius:12px; background-color:#fffdf0;">
+  <h2 style="color:#a0522d; margin-bottom:10px;">📦 همکاری سازمانی</h2>
+  <p style="font-size:18px; line-height:1.8; color:#333;">
+    رستوران آفتاب‌گردان آمادگی کامل دارد جهت تأمین غذا و پذیرایی برای کلیه شرکت‌ها، سازمان‌ها، ادارات و مجموعه‌های خصوصی و دولتی، قرارداد رسمی همکاری منعقد نماید.
+    <br><br>
+    جهت هماهنگی و دریافت اطلاعات بیشتر با مدیریت مجموعه تماس بگیرید:
+    <br>
+    <strong>مدیریت: آقای کوهی</strong>
+    <br>
+    📞 <strong>شماره تماس: 0912-123-4567</strong>
+  </p>
+</div>
+
+  
   <button onclick="toggleDark()" style="position:fixed; top:20px; left:20px; padding:8px 12px; background:#333; color:#fff; border:none; border-radius:6px; cursor:pointer;">🌓 حالت شب</button>
 
-  <script>
-  function toggleDark() {
-    document.body.classList.toggle("dark-mode");
-  }
-</script>
   
-<style>
+  <style>
   .dark-mode {
     background-color: #1e1e1e;
     color: #f0f0f0;
@@ -176,19 +186,7 @@
     color: #ffd700;
   }
 </style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const headers = document.querySelectorAll("h2");
-    headers.forEach(header => {
-      header.style.cursor = "pointer";
-      const section = header.nextElementSibling;
-      section.style.display = "none";
 
-      header.addEventListener("click", () => {
-        section.style.display = section.style.display === "none" ? "block" : "none";
-      });
-    });
-  });
-  
+
 </body>
 </html>
