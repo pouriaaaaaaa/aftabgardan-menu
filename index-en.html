@@ -1,10 +1,133 @@
-<h1>🌻 Aftabgardan Restaurant Menu</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aftabgardan Restaurant Menu</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      direction: ltr;
+      background: radial-gradient(circle at top left, #fff8dc, #fef3d3);
+      background-image: url('https://i.imgur.com/3Yz0ZyT.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 150px;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #d4af37;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 15px;
+      background-color: #fffdf0;
+    }
+
+    h2 {
+      color: #a0522d;
+      margin-top: 40px;
+      font-size: 26px;
+      border-bottom: 2px dashed #e6b800;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .item {
+      background: #fffdf7;
+      padding: 14px 18px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(160, 82, 45, 0.1);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .item:hover {
+      background-color: #fffbe6;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      transform: scale(1.02);
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+      font-weight: normal;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .item { font-size: 17px; padding: 12px; }
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .lang-switch a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, #a0522d, #d4af37);
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lang-switch a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-45deg);
+      transition: left 0.5s ease;
+    }
+
+    .lang-switch a:hover::before {
+      left: 100%;
+    }
+
+    .lang-switch a:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ Language Switch Buttons -->
 <div class="lang-switch">
   <a href="index.html"><span>🇮🇷</span> Persian</a>
   <a href="index-ar.html"><span>🇸🇦</span> Arabic</a>
   <a href="index-en.html"><span>🇬🇧</span> English</a>
 </div>
 
+<h1>🌻 Aftabgardan Restaurant Menu</h1>
 <div class="section">
   <h2>🥘 Main Dishes</h2>
   <div class="item">Joojeh Kebab with Rice<div class="desc">250g saffron chicken fillet, Iranian rice, local butter</div></div>
@@ -13,32 +136,8 @@
   <div class="item">Tahchin Chicken<div class="desc">Saffron rice, shredded chicken, yogurt, egg, barberries</div></div>
   <div class="item">Plain Rice<div class="desc">Aromatic Iranian rice, local butter</div></div>
   <div class="item">Barg Kebab<div class="desc">Lamb fillet grilled over charcoal, served with tomato and rice</div></div>
-  <div class="item">Adas Polo with Meat<div class="desc">Lentils, ground meat, raisins, Iranian rice</div></div>
-  <div class="item">Adas Polo (Vegetarian)<div class="desc">Lentils, raisins, Iranian rice</div></div>
-  <div class="item">Adas Polo with Fried Chicken Leg<div class="desc">Lentil rice with a whole fried chicken leg</div></div>
-  <div class="item">Fried Chicken Leg Dish<div class="desc">Whole chicken leg fried with special spices</div></div>
-  <div class="item">Vaziri Combo with Rice<div class="desc">1 skewer Joojeh + 1 skewer Koobideh, Iranian rice</div></div>
-  <div class="item">Vaziri Combo (No Rice)<div class="desc">Includes Joojeh and Koobideh, no rice</div></div>
-  <div class="item">Soltani Combo with Rice<div class="desc">1 skewer Barg + 1 skewer Koobideh, Iranian rice</div></div>
-  <div class="item">Soltani Combo (No Rice)<div class="desc">Includes Barg and Koobideh, no rice</div></div>
-  <div class="item">Mixed Grill with Rice<div class="desc">Joojeh, Koobideh, and Barg combo with Iranian rice</div></div>
-  <div class="item">Mixed Grill (No Rice)<div class="desc">Three types of kebab, no rice</div></div>
-  <div class="item">Bonab Kebab with Rice<div class="desc">250g pure lamb meat, charcoal grilled, with Iranian rice and tomato</div></div>
-  <div class="item">Bonab Kebab (No Rice)<div class="desc">Bonab kebab without rice, served with tomato and pepper</div></div>
-  <div class="item">Aftabgardan Special Kebab with Rice<div class="desc">1 Barg, 1 Koobideh, 1 saffron Joojeh, Iranian rice, tomato, pepper, local butter, fresh sour orange</div></div>
-  <div class="item">Macaroni<div class="desc">Macaroni with tomato sauce, ground meat, bell pepper, special spices, served with homemade pickles</div></div>
-  <div class="item">Negindar Kebab with Rice<div class="desc">Koobideh mixed with egg yolk, Iranian rice, tomato and butter</div></div>
-  <div class="item">Negindar Kebab (No Rice)<div class="desc">Negindar kebab without rice, served with tomato and pepper</div></div>
-  <div class="item">Pan-Fried Kebab with Rice<div class="desc">Homemade pan kebab, Iranian rice, tomato and butter</div></div>
-  <div class="item">Pan-Fried Kebab (No Rice)<div class="desc">Pan kebab without rice, served with tomato and pepper</div></div>
-  <div class="item">Estamboli<div class="desc">Rice, potato, tomato paste, ground meat, special spices</div></div>
-  <div class="item">Premium Saffron Joojeh<div class="desc">Saffron chicken fillet, marinated with butter and spices, served with Iranian rice</div></div>
-  <div class="item">Long-Grain Plain Rice<div class="desc">Long-grain Iranian rice, local butter, perfect with side dishes</div></div>
-  <div class="item">Lubia Polo with Meat<div class="desc">Rice, green beans, meat, tomato paste, special spices</div></div>
-  <div class="item">Lubia Polo with Chicken<div class="desc">Rice, green beans, chicken, tomato paste, special spices</div></div>
-  <div class="item">Koobideh & Chicken Combo (No Rice)<div class="desc">1 Koobideh skewer + 1 fried chicken leg, no rice</div></div>
-</div>
-<div class="section">
+
+  <div class="section">
   <h2>🍛 Stews</h2>
   <div class="item">Gheimeh with Fried Potatoes and Rice<div class="desc">Lamb meat, split peas, fried potatoes, Iranian rice</div></div>
   <div class="item">Ghormeh Sabzi with Rice<div class="desc">Fresh herbs, red beans, lamb meat, dried lime, Iranian rice</div></div>
@@ -46,12 +145,12 @@
   <div class="item">Gheimeh with Fried Potatoes (No Rice)<div class="desc">Without rice, served with potatoes and meat</div></div>
   <div class="item">Ghormeh Sabzi (No Rice)<div class="desc">Without rice, herbs, meat, red beans</div></div>
   <div class="item">Gheimeh Bademjan (No Rice)<div class="desc">Without rice, served with eggplant and meat</div></div>
-  <div class="item">Kashk Bademjan<div class="desc">Fried eggplant, whey sauce, mint, fried onion</div></div>
+  <div class="item">Kashk Bademjan<div class="desc">Fried eggplant, whey, mint, fried onion</div></div>
 </div>
 
 <div class="section">
   <h2>🐟 Seafood</h2>
-  <div class="item">Sabzi Polo with Fried Trout<div class="desc">Herbed rice, fried trout, lemon, sour orange, fresh herbs</div></div>
+  <div class="item">Herbed Rice with Fried Trout<div class="desc">Herbed rice, fried trout, lemon, sour orange, fresh herbs</div></div>
   <div class="item">Trout with Rice<div class="desc">Iranian rice, fried trout, local butter, grilled tomato</div></div>
   <div class="item">Trout Dish (No Rice)<div class="desc">Trout without rice, served with herbs and lemon</div></div>
   <div class="item">Beta Trout with Rice<div class="desc">Trout with special sauce, Iranian rice, herbs, sour orange</div></div>
@@ -64,7 +163,7 @@
   <div class="item">Seasonal Salad<div class="desc">Lettuce, tomato, cucumber, carrot, special dressing</div></div>
   <div class="item">Canned Soda</div>
   <div class="item">Family Size Soda</div>
-  <div class="item">Cup Yogurt Drink (Doogh)</div>
+  <div class="item">Cup Yogurt Drink</div>
   <div class="item">Family Size Yogurt Drink</div>
   <div class="item">Mineral Water</div>
 </div>
@@ -117,5 +216,3 @@
     document.body.classList.toggle("dark-mode");
   }
 </script>
-
-
