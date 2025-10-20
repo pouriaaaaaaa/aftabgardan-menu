@@ -68,9 +68,7 @@
   </style>
 </head>
 <body>
-
   <h1>📋 پنل مدیریت منوی رستوران</h1>
-
   <div id="menu-container">
     <!-- آیتم‌ها به صورت داینامیک اینجا بارگذاری می‌شن -->
   </div>
@@ -93,12 +91,15 @@
       <input type="number" value="${item.price}" />
       <label>تخفیف (%):</label>
       <input type="number" value="${item.discount}" />
-      <button>ذخیره تغییرات</button>
+      <button onclick="saveItem('${item.name}')">ذخیره تغییرات</button>
     `;
 
     container.appendChild(box);
   });
-</script>
 
+  function saveItem(name) {
+    alert("تغییرات آیتم '" + name + "' ذخیره شد ✅");
+  }
+</script>
 </body>
 </html>
