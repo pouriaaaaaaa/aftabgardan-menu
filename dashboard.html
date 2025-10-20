@@ -74,28 +74,31 @@
   <div id="menu-container">
     <!-- آیتم‌ها به صورت داینامیک اینجا بارگذاری می‌شن -->
   </div>
+<script>
+  const menuData = [
+    { name: "چلو جوجه کباب", price: 120000, discount: 0 },
+    { name: "چلو کباب کوبیده", price: 110000, discount: 10 },
+    { name: "ته‌چین مرغ", price: 130000, discount: 5 }
+  ];
 
-  <script>
-    const menuData = [
-      {
-        name: "چلو جوجه کباب",
-        price: 120000,
-        discount: 0
-      },
-      {
-        name: "چلو کباب کوبیده",
-        price: 110000,
-        discount: 10
-      },
-      {
-        name: "ته‌چین مرغ",
-        price: 130000,
-        discount: 5
-      }
-    ];
+  const container = document.getElementById("menu-container");
 
-    const container
-      </script>
+  menuData.forEach(item => {
+    const box = document.createElement("div");
+    box.className = "menu-item";
+
+    box.innerHTML = `
+      <h3>${item.name}</h3>
+      <label>قیمت (تومان):</label>
+      <input type="number" value="${item.price}" />
+      <label>تخفیف (%):</label>
+      <input type="number" value="${item.discount}" />
+      <button>ذخیره تغییرات</button>
+    `;
+
+    container.appendChild(box);
+  });
+</script>
 
 </body>
 </html>
