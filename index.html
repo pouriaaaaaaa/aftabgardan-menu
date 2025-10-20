@@ -64,74 +64,87 @@
       font-weight: normal;
       line-height: 1.6;
     }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 28px; }
-      h2 { font-size: 22px; }
-      .item { font-size: 17px; padding: 12px; }
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>منوی رستوران آفتاب‌گردان</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      direction: rtl;
+      background: radial-gradient(circle at top left, #fff8dc, #fef3d3);
+      background-image: url('https://i.imgur.com/3Yz0ZyT.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 150px;
+      padding: 20px;
+      margin: 0;
     }
 
-   .lang-switch {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
+    h1 {
+      color: #d4af37;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 15px;
+      background-color: #fffdf0;
+    }
 
-.lang-switch a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #a0522d, #d4af37);
-  border-radius: 10px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
+    h2 {
+      color: #a0522d;
+      margin-top: 40px;
+      font-size: 26px;
+      border-bottom: 2px dashed #e6b800;
+      padding-bottom: 5px;
+    }
 
-.lang-switch a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.2);
-  transform: skewX(-45deg);
-  transition: left 0.5s ease;
-}
+    .section {
+      margin-top: 20px;
+    }
 
-.lang-switch a:hover::before {
-  left: 100%;
-}
+    .item {
+      background: #fffdf7;
+      padding: 14px 18px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(160, 82, 45, 0.1);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.lang-switch a:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-}
+    .item:hover {
+      background-color: #fffbe6;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      transform: scale(1.02);
+    }
 
-
-  </style>
+    .desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+      font-weight: normal;
+      line-height: 1.6;
+    }
 </head>
 <body>
 
   <!-- ✅ دکمه‌های تغییر زبان با استایل حرفه‌ای -->
-<div class="lang-switch">
-  <a href="index.html"><span>🇮🇷</span> فارسی</a>
-  <a href="index-ar.html"><span>🇸🇦</span> العربية</a>
-  <a href="index-en.html"><span>🇬🇧</span> English</a>
-</div>
+  <div class="lang-switch">
+    <a href="index.html"><span>🇮🇷</span> فارسی</a>
+    <a href="index-ar.html"><span>🇸🇦</span> العربية</a>
+    <a href="index-en.html"><span>🇬🇧</span> English</a>
+  </div>
 
+  <!-- 🔐 لینک مخفی پنل مدیریتی -->
+  <a href="admin.html" class="admin-link">مدیریت منو</a>
 
   <h1>🌻 منوی رستوران آفتاب‌گردان</h1>
-    <div class="section">
+  <div class="section">
     <h2>🥘 غذاهای اصلی</h2>
     <div class="item">چلو جوجه کباب<div class="desc">۲۵۰ گرم فیله مرغ زعفرانی، برنج ایرانی، کره محلی</div></div>
     <div class="item">چلو کباب کوبیده<div class="desc">۲ سیخ کوبیده گوشت مخلوط، برنج ایرانی، گوجه کبابی</div></div>
@@ -164,38 +177,6 @@
     <div class="item">لوبیا پلو با مرغ<div class="desc">برنج، لوبیا سبز، مرغ، رب گوجه، ادویه مخصوص</div></div>
     <div class="item">خوراک کوبیده با مرغ<div class="desc">۱ سیخ کوبیده + ۱ ران مرغ سرخ‌شده، بدون برنج</div></div>
   </div>
-
-  <div class="section">
-    <h2>🍛 خورشت‌ها</h2>
-    <div class="item">چلو خورشت قیمه سیب‌زمینی<div class="desc">گوشت گوسفندی، لپه، سیب‌زمینی سرخ‌شده، برنج ایرانی</div></div>
-    <div class="item">چلو خورشت قورمه‌سبزی<div class="desc">سبزی تازه، لوبیا قرمز، گوشت گوسفندی، لیمو عمانی، برنج ایرانی</div></div>
-    <div class="item">چلو خورشت قیمه بادمجان<div class="desc">گوشت، لپه، بادمجان سرخ‌شده، برنج ایرانی</div></div>
-    <div class="item">خوراک قیمه سیب‌زمینی<div class="desc">بدون برنج، همراه با سیب‌زمینی و گوشت</div></div>
-    <div class="item">خوراک قورمه‌سبزی<div class="desc">بدون برنج، سبزی، گوشت، لوبیا قرمز</div></div>
-    <div class="item">خوراک قیمه بادمجان<div class="desc">بدون برنج، همراه با بادمجان و گوشت</div></div>
-    <div class="item">کشک بادمجان<div class="desc">بادمجان سرخ‌شده، کشک، نعناع، پیاز داغ</div></div>
-  </div>
-
-  <div class="section">
-    <h2>🐟 غذاهای دریایی</h2>
-    <div class="item">سبزی‌پلو با ماهی قزل‌آلا<div class="desc">برنج سبزی‌دار، ماهی قزل‌آلا سرخ‌شده، لیمو، نارنج و سبزی تازه</div></div>
-    <div class="item">چلو ماهی قزل‌آلا<div class="desc">برنج ایرانی، ماهی قزل‌آلا سرخ‌شده، کره محلی و گوجه</div></div>
-    <div class="item">خوراک ماهی قزل‌آلا<div class="desc">ماهی قزل‌آلا بدون برنج، همراه با سبزی و لیمو</div></div>
-    <div class="item">چلو ماهی بتا قزل‌آلا<div class="desc">ماهی قزل‌آلا با سس مخصوص، برنج ایرانی، سبزی و نارنج</div></div>
-    <div class="item">خوراک میگو تند جنوبی<div class="desc">میگو با سس تند، فلفل، سیر و سبزیجات، بدون برنج</div></div>
-    <div class="item">چلو ماهی شیر کبابی<div class="desc">ماهی شیر کبابی، برنج ایرانی، لیمو و کره محلی</div></div>
-  </div>
-  <div class="section">
-    <h2>🥗 پیش‌غذا و نوشیدنی</h2>
-    <div class="item">سالاد شیرازی<div class="desc">خیار، گوجه، پیاز، آب‌لیمو، نعناع خشک</div></div>
-    <div class="item">سالاد فصل<div class="desc">کاهو، گوجه، خیار، هویج، سس مخصوص</div></div>
-    <div class="item">نوشابه قوطی</div>
-    <div class="item">نوشابه خانواده</div>
-    <div class="item">دوغ لیوانی</div>
-    <div class="item">دوغ خانواده</div>
-    <div class="item">آب معدنی</div>
-  </div>
-
   <div style="margin-top:50px; padding:20px; border:2px dashed #d4af37; border-radius:12px; background-color:#fffdf0;">
     <h2 style="color:#a0522d; margin-bottom:10px;">📦 همکاری سازمانی</h2>
     <p style="font-size:18px; line-height:1.8; color:#333;">
@@ -227,17 +208,16 @@
     .dark-mode h2 {
       color: #ffd700;
     }
-.dark-mode .lang-switch a {
-  background: linear-gradient(135deg, #444, #666);
-  color: #ffd700;
-}
 
-.dark-mode .lang-switch a:hover {
-  background: linear-gradient(135deg, #666, #999);
-  color: #fff;
-}
+    .dark-mode .lang-switch a {
+      background: linear-gradient(135deg, #444, #666);
+      color: #ffd700;
+    }
 
-   
+    .dark-mode .lang-switch a:hover {
+      background: linear-gradient(135deg, #666, #999);
+      color: #fff;
+    }
   </style>
 
   <script>
@@ -248,5 +228,3 @@
 
 </body>
 </html>
-
-
