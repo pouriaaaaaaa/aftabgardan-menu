@@ -64,72 +64,58 @@
       font-weight: normal;
       line-height: 1.6;
     }
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>منوی رستوران آفتاب‌گردان</title>
-  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
-  <style>
-    body {
-      font-family: 'Vazir', sans-serif;
-      direction: rtl;
-      background: radial-gradient(circle at top left, #fff8dc, #fef3d3);
-      background-image: url('https://i.imgur.com/3Yz0ZyT.png');
-      background-repeat: no-repeat;
-      background-position: top right;
-      background-size: 150px;
-      padding: 20px;
-      margin: 0;
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .item { font-size: 17px; padding: 12px; }
     }
 
-    h1 {
-      color: #d4af37;
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 20px;
-      border: 2px solid #d4af37;
-      border-radius: 12px;
-      padding: 15px;
-      background-color: #fffdf0;
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
     }
 
-    h2 {
-      color: #a0522d;
-      margin-top: 40px;
-      font-size: 26px;
-      border-bottom: 2px dashed #e6b800;
-      padding-bottom: 5px;
-    }
-
-    .section {
-      margin-top: 20px;
-    }
-
-    .item {
-      background: #fffdf7;
-      padding: 14px 18px;
-      margin: 10px 0;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(160, 82, 45, 0.1);
-      transition: all 0.3s ease;
-      font-size: 20px;
+    .lang-switch a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 16px;
       font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, #a0522d, #d4af37);
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .item:hover {
-      background-color: #fffbe6;
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-      transform: scale(1.02);
+    .lang-switch a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-45deg);
+      transition: left 0.5s ease;
     }
 
-    .desc {
-      font-size: 14px;
-      color: #555;
-      margin-top: 5px;
-      font-weight: normal;
-      line-height: 1.6;
+    .lang-switch a:hover::before {
+      left: 100%;
     }
+
+        .lang-switch a:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
 
@@ -144,40 +130,34 @@
   <a href="admin.html" class="admin-link">مدیریت منو</a>
 
   <h1>🌻 منوی رستوران آفتاب‌گردان</h1>
+
   <div class="section">
     <h2>🥘 غذاهای اصلی</h2>
-    <div class="item">چلو جوجه کباب<div class="desc">۲۵۰ گرم فیله مرغ زعفرانی، برنج ایرانی، کره محلی</div></div>
-    <div class="item">چلو کباب کوبیده<div class="desc">۲ سیخ کوبیده گوشت مخلوط، برنج ایرانی، گوجه کبابی</div></div>
-    <div class="item">جوجه ممتاز<div class="desc">فیله مرغ بدون استخوان، مزه‌دار شده با زعفران و کره</div></div>
-    <div class="item">ته‌چین مرغ<div class="desc">برنج زعفرانی، مرغ ریش‌شده، ماست، تخم‌مرغ، زرشک</div></div>
-    <div class="item">چلو با برنج ایرانی<div class="desc">برنج ایرانی خوش‌عطر، کره محلی</div></div>
-    <div class="item">کباب برگ<div class="desc">گوشت گوسفندی راسته، زغالی، همراه با گوجه و برنج</div></div>
-    <div class="item">عدس‌پلو با گوشت<div class="desc">عدس، گوشت چرخ‌کرده، کشمش، برنج ایرانی</div></div>
-    <div class="item">عدس‌پلو ساده<div class="desc">عدس، کشمش، برنج ایرانی</div></div>
-    <div class="item">عدس‌پلو با ران مرغ سرخ‌شده<div class="desc">عدس‌پلو همراه با ران مرغ سرخ‌شده کامل</div></div>
-    <div class="item">خوراک مرغ سوخاری<div class="desc">ران مرغ کامل، سرخ‌شده با ادویه مخصوص</div></div>
-    <div class="item">چلو وزیری<div class="desc">۱ سیخ جوجه + ۱ سیخ کوبیده، برنج ایرانی</div></div>
-    <div class="item">خوراک وزیری<div class="desc">بدون برنج، شامل جوجه و کوبیده</div></div>
-    <div class="item">چلو سلطانی<div class="desc">۱ سیخ برگ + ۱ سیخ کوبیده، برنج ایرانی</div></div>
-    <div class="item">خوراک سلطانی<div class="desc">بدون برنج، شامل برگ و کوبیده</div></div>
-    <div class="item">چلو میکس<div class="desc">ترکیب جوجه، کوبیده و برگ، همراه با برنج ایرانی</div></div>
-    <div class="item">خوراک میکس<div class="desc">ترکیب سه نوع کباب بدون برنج</div></div>
-    <div class="item">چلو کباب بناب<div class="desc">۲۵۰ گرم گوشت خالص گوسفندی، زغالی، همراه با برنج ایرانی و گوجه</div></div>
-    <div class="item">خوراک بناب<div class="desc">کباب بناب بدون برنج، همراه با گوجه و فلفل</div></div>
-    <div class="item">چلو کباب مخصوص آفتاب‌گردان<div class="desc">۱ سیخ برگ، ۱ سیخ کوبیده، ۱ سیخ جوجه زعفرانی، همراه با برنج ایرانی، گوجه، فلفل، کره محلی و نارنج تازه</div></div>
-    <div class="item">ماکارونی<div class="desc">ماکارونی با سس گوجه‌فرنگی، گوشت چرخ‌کرده، فلفل دلمه‌ای و ادویه مخصوص، سرو شده با ترشی خانگی</div></div>
-    <div class="item">چلو کباب نگین‌دار<div class="desc">کوبیده مخلوط با زرده تخم‌مرغ، برنج ایرانی، گوجه و کره</div></div>
-    <div class="item">خوراک کباب نگین‌دار<div class="desc">کباب نگین‌دار بدون برنج، همراه با گوجه و فلفل</div></div>
-    <div class="item">چلو کباب تابه‌ای<div class="desc">کباب تابه‌ای خانگی، برنج ایرانی، گوجه و کره</div></div>
-    <div class="item">خوراک کباب تابه‌ای<div class="desc">کباب تابه‌ای بدون برنج، همراه با گوجه و فلفل</div></div>
-    <div class="item">استامبولی<div class="desc">برنج، سیب‌زمینی، رب گوجه، گوشت چرخ‌کرده، ادویه مخصوص</div></div>
-    <div class="item">جوجه کباب ممتاز<div class="desc">فیله مرغ زعفرانی، مزه‌دار شده با کره و ادویه مخصوص، همراه با برنج ایرانی</div></div>
-    <div class="item">چلو ساده برنج دانه‌بلند<div class="desc">برنج دانه‌بلند ایرانی، کره محلی، مناسب برای همراهی با خوراک‌ها</div></div>
-    <div class="item">لوبیا پلو با گوشت<div class="desc">برنج، لوبیا سبز، گوشت، رب گوجه، ادویه مخصوص</div></div>
-    <div class="item">لوبیا پلو با مرغ<div class="desc">برنج، لوبیا سبز، مرغ، رب گوجه، ادویه مخصوص</div></div>
-    <div class="item">خوراک کوبیده با مرغ<div class="desc">۱ سیخ کوبیده + ۱ ران مرغ سرخ‌شده، بدون برنج</div></div>
-  </div>
-  <div style="margin-top:50px; padding:20px; border:2px dashed #d4af37; border-radius:12px; background-color:#fffdf0;">
+
+    <div class="item">چلو جوجه کباب
+      <div class="desc">۲۵۰ گرم فیله مرغ زعفرانی، برنج ایرانی، کره محلی</div>
+    </div>
+
+    <div class="item">چلو کباب کوبیده
+      <div class="desc">۲ سیخ کوبیده گوشت مخلوط، برنج ایرانی، گوجه کبابی</div>
+    </div>
+
+    <div class="item">جوجه ممتاز
+      <div class="desc">فیله مرغ بدون استخوان، مزه‌دار شده با زعفران و کره</div>
+    </div>
+
+    <div class="item">ته‌چین مرغ
+      <div class="desc">برنج زعفرانی، مرغ ریش‌شده، ماست، تخم‌مرغ، زرشک</div>
+    </div>
+
+    <div class="item">چلو با برنج ایرانی
+      <div class="desc">برنج ایرانی خوش‌عطر، کره محلی</div>
+    </div>
+
+    <div class="item">کباب برگ
+      <div class="desc">گوشت گوسفندی راسته، زغالی، همراه با گوجه و برنج</div>
+    </div>
+   <div style="margin-top:50px; padding:20px; border:2px dashed #d4af37; border-radius:12px; background-color:#fffdf0;">
     <h2 style="color:#a0522d; margin-bottom:10px;">📦 همکاری سازمانی</h2>
     <p style="font-size:18px; line-height:1.8; color:#333;">
       رستوران آفتاب‌گردان آمادگی کامل دارد جهت تأمین غذا و پذیرایی برای کلیه شرکت‌ها، سازمان‌ها، ادارات و مجموعه‌های خصوصی و دولتی، قرارداد رسمی همکاری منعقد نماید.
@@ -193,7 +173,7 @@
   <!-- 🌙 دکمه حالت شب -->
   <button onclick="toggleDark()" style="position:fixed; top:20px; left:20px; padding:8px 12px; background:#333; color:#fff; border:none; border-radius:6px; cursor:pointer;">🌓 حالت شب</button>
 
-  <style>
+   <style>
     .dark-mode {
       background-color: #1e1e1e;
       color: #f0f0f0;
