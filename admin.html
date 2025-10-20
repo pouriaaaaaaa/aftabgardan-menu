@@ -55,60 +55,33 @@
     button:hover {
       background-color: #a0522d;
     }
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>ورود به پنل مدیریتی</title>
-  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
-  <style>
-    body {
-      font-family: 'Vazir', sans-serif;
-      background: linear-gradient(to bottom right, #fff8dc, #fef3d3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
 
-    .login-box {
-      background-color: #fffdf0;
-      border: 2px solid #d4af37;
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 8px 20px rgba(160, 82, 45, 0.2);
-      text-align: center;
-      width: 300px;
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
     }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>ورود به پنل مدیریتی</h1>
+    <input type="password" id="password" placeholder="رمز عبور را وارد کنید" />
+    <button onclick="checkPassword()">ورود</button>
+    <div id="error" class="error"></div>
+  </div>
 
-    h1 {
-      font-size: 24px;
-      color: #a0522d;
-      margin-bottom: 30px;
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      if (pass === "1234") {
+        window.location.href = "dashboard.html";
+      } else {
+        error.textContent = "رمز عبور اشتباه است.";
+      }
     }
+  </script>
+</body>
+</html>
 
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #d4af37;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #a0522d;
-    }
